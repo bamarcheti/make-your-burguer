@@ -11,33 +11,16 @@
             </div>
         </div>
         <div id="burguer-table-rows">
-            <div class="burguer-table-row">
-                <div class="order-number">1</div>
-                <div>João</div>
-                <div>Pão de Trigo</div>
-                <div>Maminha</div>
+            <div class="burguer-table-row" v-for="burguer in burguers" :key="burguer.id">
+                <div class="order-number">{{ burguer.id }}</div>
+                <div>{{ burguer.nome }}</div>
+                <div>{{ burguer.pao }}</div>
+                <div>{{ burguer.carne }}</div>
                 <div>
                     <ul>
-                        <li>Salame</li>
-                        <li>Tomate</li>
-                    </ul>
-                </div>
-                <div>
-                    <select name="status" class="status">
-                        <option value="">Selecione</option>
-                    </select>
-                    <button class="delete-btn">Cancelar</button>
-                </div>
-            </div>
-            <div class="burguer-table-row">
-                <div class="order-number">1</div>
-                <div>João</div>
-                <div>Pão de Trigo</div>
-                <div>Maminha</div>
-                <div>
-                    <ul>
-                        <li>Salame</li>
-                        <li>Tomate</li>
+                        <li v-for="(opcional, index) in burguer.opcionais" :key="index">
+                            {{ opcional }}
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -53,7 +36,32 @@
 
 <script>
 export default {
-    name: "Dashboard"
+    name: "Dashboard",
+    data() {
+        return {
+            burguers: null,
+            burguer_id: null,
+            status: []
+        }
+    },
+    methods: {
+        async getPedidos() {
+
+            const req = await fetch("http://localhost:3000/burguers");
+
+            const data = await req.json();
+
+            this.burguers = data;
+
+            console.log(this.burguers);
+
+            // resgatar os status
+
+        }
+    },
+    mounted() {
+        this.getPedidos()
+    }
 }
 </script>
 
@@ -87,7 +95,7 @@ export default {
         border-bottom: 1px solid #CCC;
     }
 
-    #border-table-heading .order-id,
+    #burguer-table-heading .order-id,
     .burguer-table-row .order-number {
         width: 5%;
     }

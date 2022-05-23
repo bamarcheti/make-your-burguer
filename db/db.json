@@ -104,22 +104,6 @@
       "id": 2
     },
     {
-      "nome": "",
-      "carne": "",
-      "pao": "",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "",
-      "carne": "",
-      "pao": "",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
       "nome": "Laura",
       "carne": "Maminha",
       "pao": "3 Queijos",
@@ -142,6 +126,30 @@
       ],
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "nome": "Paulo",
+      "carne": "Alcatra",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Salame",
+        "Bacon",
+        "Cebola roxa",
+        "Tomate",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "nome": "Priscila Maria",
+      "carne": "Picanha",
+      "pao": "Pão Mexicano",
+      "opcionais": [
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 8
     }
   ]
 }
