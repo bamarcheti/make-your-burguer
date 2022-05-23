@@ -1,5 +1,7 @@
 # make-your-burguer
 
+# esse sistema é para pedir um hamburguer e verificar os pedidos que foram finalizados, estão sendo feitos e ainda serão feitos
+
 ## Project setup
 ```
 npm install
