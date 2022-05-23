@@ -84,19 +84,19 @@
   "burguers": [
     {
       "nome": "Bia",
-      "carne": "Picanha",
+      "carne": "Veggie burguer",
       "pao": "Italiano Branco",
       "opcionais": [
-        "Bacon",
+        "Tomate",
         "Cheddar"
       ],
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "Ba",
+      "nome": "Bárbara",
       "carne": "Maminha",
-      "pao": "Italiano Branco",
+      "pao": "3 Queijos",
       "opcionais": [
         "Cheddar"
       ],
@@ -106,31 +106,29 @@
     {
       "nome": "Laura",
       "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Tomate",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Priscila",
-      "carne": "Alcatra",
       "pao": "Parmesão e Orégano",
       "opcionais": [
         "Bacon",
-        "Cheddar",
-        "Tomate"
+        "Tomate",
+        "Cheddar"
       ],
       "status": "Solicitado",
-      "id": 6
+      "id": 3
+    },
+    {
+      "nome": "Priscila",
+      "carne": "Picanha",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 4
     },
     {
       "nome": "Paulo",
       "carne": "Alcatra",
-      "pao": "3 Queijos",
+      "pao": "Pão Mexicano",
       "opcionais": [
         "Salame",
         "Bacon",
@@ -139,17 +137,7 @@
         "Cheddar"
       ],
       "status": "Solicitado",
-      "id": 7
-    },
-    {
-      "nome": "Priscila Maria",
-      "carne": "Picanha",
-      "pao": "Pão Mexicano",
-      "opcionais": [
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 8
+      "id": 5
     }
   ]
 }
