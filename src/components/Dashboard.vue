@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { get } from 'http';
+//import { get } from 'http';
 
 export default {
     name: "Dashboard",
@@ -64,14 +64,14 @@ export default {
             this.getStatus();
 
         },
-        async geyStatus() {
-
-            const req = await fetch("http://localhost:3000/status");
-
-            const data = await req.json();
-
-            this.status = data;
-        }
+//        async getStatus() {
+//
+//            const req = await fetch("http://localhost:3000/status");
+//
+//            const data = await req.json();
+//
+//            this.status = data;
+//        }
     },
     mounted() {
         this.getPedidos()
