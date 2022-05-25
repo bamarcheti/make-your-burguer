@@ -30,7 +30,7 @@
                             {{ s.tipo }}
                         </option>
                     </select>
-                    <button class="delete-btn">Cancelar</button>
+                    <button class="delete-btn" @click="deleteBurguer(burguer.id)">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -64,14 +64,27 @@ export default {
             this.getStatus();
 
         },
-//        async getStatus() {
-//
-//            const req = await fetch("http://localhost:3000/status");
-//
-//            const data = await req.json();
-//
-//            this.status = data;
-//        }
+        async getStatus() {
+            
+            const req = await fetch("http://localhost:3000/status");
+
+            const data = await req.json();
+
+            this.status = data;
+        },
+        async deleteBurguer(id) {
+
+            const req = await fetch(`http://localhost:3000/burguers${id}`, {
+                method: "DELETE"
+            });
+
+            const res = await req.json();
+
+            // mensagem de pedido deletado
+
+            this.getPedidos();
+
+        }
     },
     mounted() {
         this.getPedidos()

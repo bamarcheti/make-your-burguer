@@ -138,6 +138,19 @@
       ],
       "status": "Solicitado",
       "id": 5
+    },
+    {
+      "nome": "Paulo Sergio",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Tomate",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 6
     }
   ]
 }
