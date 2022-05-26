@@ -74,7 +74,7 @@ export default {
         },
         async deleteBurguer(id) {
 
-            const req = await fetch(`http://localhost:3000/burguers${id}`, {
+            const req = await fetch(`http://localhost:3000/burguers/${id}`, {
                 method: "DELETE"
             });
 
