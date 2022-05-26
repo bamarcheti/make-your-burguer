@@ -3,29 +3,49 @@
     "paes": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "tipo": "Pão de Hambúrguer Americano"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "tipo": "Pão Italiano"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "tipo": "Brioche"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "tipo": "Pão Australiano"
       },
       {
         "id": 5,
-        "tipo": "Pão Mexicano"
+        "tipo": "Pão de Azeite"
+      },
+      {
+        "id": 6,
+        "tipo": "Italiano Branco"
+      },
+      {
+        "id": 7,
+        "tipo": "3 Queijos"
+      },
+      {
+        "id": 8,
+        "tipo": "Parmesão e Orégano"
+      },
+      {
+        "id": 9,
+        "tipo": "Integral"
+      },
+      {
+        "id": 10,
+        "tipo": "Ciabatta"
       }
     ],
     "carnes": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "tipo": "Acém"
       },
       {
         "id": 2,
@@ -33,10 +53,34 @@
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "tipo": "Contrafilé"
       },
       {
         "id": 4,
+        "tipo": "Coxão duro"
+      },
+      {
+        "id": 5,
+        "tipo": "Fraldinha"
+      },
+      {
+        "id": 6,
+        "tipo": "Maminha"
+      },
+      {
+        "id": 7,
+        "tipo": "Patinho"
+      },
+      {
+        "id": 8,
+        "tipo": "Peito"
+      },
+      {
+        "id": 9,
+        "tipo": "Pescoço"
+      },
+      {
+        "id": 10,
         "tipo": "Veggie burguer"
       }
     ],
@@ -51,19 +95,35 @@
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "Molho de Cheddar"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "tipo": "Maionese Caseira"
       },
       {
         "id": 5,
-        "tipo": "Cebola roxa"
+        "tipo": "Barbecue"
       },
       {
         "id": 6,
-        "tipo": "Pepino"
+        "tipo": "Tomate"
+      },
+      {
+        "id": 7,
+        "tipo": "Alface"
+      },
+      {
+        "id": 8,
+        "tipo": "Picles"
+      },
+      {
+        "id": 9,
+        "tipo": "Cebola Caramelizada"
+      },
+      {
+        "id": 10,
+        "tipo": "Cebola Roxa"
       }
     ]
   },
@@ -83,47 +143,47 @@
   ],
   "burguers": [
     {
-      "nome": "Bia",
-      "carne": "Veggie burguer",
-      "pao": "Italiano Branco",
+      "nome": "Bárbara",
+      "carne": "Alcatra",
+      "pao": "Pão Australiano",
       "opcionais": [
-        "Tomate",
-        "Cheddar"
+        "Bacon",
+        "Molho de Cheddar",
+        "Cebola Caramelizada",
+        "Maionese Caseira"
       ],
-      "status": "Em produção",
+      "status": "Finalizado",
       "id": 1
     },
     {
-      "nome": "Bárbara",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
+      "nome": "Laura",
+      "carne": "Acém",
+      "pao": "Brioche",
       "opcionais": [
-        "Cheddar"
+        "Bacon",
+        "Molho de Cheddar",
+        "Barbecue",
+        "Alface",
+        "Cebola Caramelizada",
+        "Maionese Caseira",
+        "Tomate"
       ],
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": 2
     },
     {
-      "nome": "Laura",
-      "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
+      "nome": "Beatriz",
+      "carne": "Contrafilé",
+      "pao": "Pão de Hambúrguer Americano",
       "opcionais": [
         "Bacon",
-        "Tomate",
-        "Cheddar"
+        "Molho de Cheddar",
+        "Barbecue",
+        "Cebola Caramelizada",
+        "Maionese Caseira"
       ],
       "status": "Solicitado",
       "id": 3
-    },
-    {
-      "nome": "Priscila",
-      "carne": "Picanha",
-      "pao": "Integral",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 4
     }
   ]
 }
