@@ -1,5 +1,6 @@
 <template>
     <div id="burguer-table">
+        <Message :msg="msg" v-show="msg" />
         <div>
             <div id="burguer-table-heading">
                 <div class="order-id">#:</div>
@@ -38,7 +39,7 @@
 </template>
 
 <script>
-//import { get } from 'http';
+import Message from './Message.vue';
 
 export default {
     name: "Dashboard",
@@ -46,65 +47,62 @@ export default {
         return {
             burguers: null,
             burguer_id: null,
-            status: []
+            status: [],
+            msg: null
         }
+    },
+    components: {
+        Message
     },
     methods: {
         async getPedidos() {
-
             const req = await fetch("http://localhost:3000/burguers");
-
             const data = await req.json();
-
             this.burguers = data;
-
             console.log(this.burguers);
-
             // resgatar os status
             this.getStatus();
-
         },
         async getStatus() {
-            
             const req = await fetch("http://localhost:3000/status");
-
             const data = await req.json();
-
             this.status = data;
         },
         async deleteBurguer(id) {
-
             const req = await fetch(`http://localhost:3000/burguers/${id}`, {
                 method: "DELETE"
             });
-
             const res = await req.json();
+            
+            // colocar uma mensagem no sistema
+            this.msg = `Pedido removido com sucesso!`;
 
-            // mensagem de pedido deletado
+            // limpar mensagem
+            setTimeout(() => this.msg = "", 3000);
 
             this.getPedidos();
-
         },
         async updateBurguer(event, id) {
-
             const option = event.target.value;
-
             const dataJson = JSON.stringify({ status: option });
-
             const req = await fetch(`http://localhost:3000/burguers/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: dataJson
             });
-
             const res = await req.json();
 
-            console.log(res);
+            // colocar uma mensagem no sistema
+            this.msg = `O pedido N° ${res.id} foi atualizado para ${res.status}`;
 
+            // limpar mensagem
+            setTimeout(() => this.msg = "", 3000);
+
+            console.log(res);
         },
     },
     mounted() {
-        this.getPedidos()
+        this.getPedidos();
     },
 }
 

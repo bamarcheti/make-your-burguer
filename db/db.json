@@ -100,7 +100,7 @@
       "opcionais": [
         "Cheddar"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 2
     },
     {
@@ -124,20 +124,6 @@
       ],
       "status": "Solicitado",
       "id": 4
-    },
-    {
-      "nome": "Paulo",
-      "carne": "Alcatra",
-      "pao": "Pão Mexicano",
-      "opcionais": [
-        "Salame",
-        "Bacon",
-        "Cebola roxa",
-        "Tomate",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 5
     }
   ]
 }
