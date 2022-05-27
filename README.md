@@ -1,6 +1,6 @@
 # make-your-burguer
 
-# esse sistema é para pedir um hamburguer e verificar os pedidos que foram finalizados, estão sendo feitos e ainda serão feitos
+# Desenvolvendo um app para montar o seu hamburguer e verificar os pedidos
 
 ## Project setup
 ```
