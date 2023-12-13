@@ -12,8 +12,8 @@ Projeto contruído com o objetivo de pedir um hamburguer e verificar o status do
 >
 > ### _Server_
 >
-> ![Vue.js]([https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D))
-> ![JavaScript]([https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E))
+> ![Vue.js](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+> ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ## **✨ Como executar**
 
