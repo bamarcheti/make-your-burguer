@@ -2,7 +2,7 @@
 
 Projeto contruído com o objetivo de pedir um hamburguer e verificar o status do pedido.
 
-<!-- **[🔗 Clique aqui para acessar]()** -->
+**[🔗 Clique aqui para acessar](https://make-your-burguer-one.vercel.app/)**
 
 ## **🛠 Tecnologias**
 > ![Vue.js](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
