@@ -10,7 +10,7 @@ Projeto contruído com o objetivo de pedir um hamburguer e verificar o status do
 
 ## **✨ Como executar**
 
-- [README-install](./README-install.md)
+- ***[README-install](./README-install.md)***
 
 ## **💛 Contato**
 
