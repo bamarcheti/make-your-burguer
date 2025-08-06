@@ -58,18 +58,19 @@
 </template>
 
 <script>
+import api from "../api";
 import Message from "./Message.vue";
 
 export default {
   name: "BurguerForm",
   data() {
     return {
-      paes: null,
-      carnes: null,
-      opcionaisdata: null,
-      nome: null,
-      pao: null,
-      carne: null,
+      paes: [],
+      carnes: [],
+      opcionaisdata: [],
+      nome: "",
+      pao: "",
+      carne: "",
       opcionais: [],
       msg: null,
     };
@@ -87,43 +88,30 @@ export default {
     },
     async createBurguer(e) {
       e.preventDefault();
-      this.msg =
-        "No My JSON Server não é possível criar pedidos (somente leitura).";
+
+      if (!this.nome || !this.pao || !this.carne) {
+        this.msg = "Preencha todos os campos obrigatórios!";
+        setTimeout(() => (this.msg = ""), 3000);
+        return;
+      }
+
+      const data = {
+        nome: this.nome,
+        carne: this.carne,
+        pao: this.pao,
+        opcionais: [...this.opcionais],
+        status: "Solicitado",
+      };
+
+      const res = await api.post("/burguers", data);
+      this.msg = `Pedido N° ${res.data.id} realizado com sucesso!`;
       setTimeout(() => (this.msg = ""), 3000);
+
+      this.nome = "";
+      this.carne = "";
+      this.pao = "";
+      this.opcionais = [];
     },
-    // async createBurguer(e) {
-    //   e.preventDefault();
-
-    //   const data = {
-    //     nome: this.nome,
-    //     carne: this.carne,
-    //     pao: this.pao,
-    //     opcionais: Array.from(this.opcionais),
-    //     status: "Solicitado",
-    //   };
-
-    //   const dataJson = JSON.stringify(data);
-
-    //   const req = await fetch("http://localhost:3000/burguers", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: dataJson,
-    //   });
-
-    //   const res = await req.json();
-
-    //   // colocar uma mensagem no sistema
-    //   this.msg = `Pedido N° ${res.id} realizado com sucesso`;
-
-    //   // limpar mensagem
-    //   setTimeout(() => (this.msg = ""), 3000);
-
-    //   // limpar os campos
-    //   this.nome = "";
-    //   this.carne = "";
-    //   this.pao = "";
-    //   this.opcionais = "";
-    // },
   },
   mounted() {
     this.getIngredientes();
