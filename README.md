@@ -1,12 +1,22 @@
 # **Make Your Burguer**
 
-Projeto contruído com o objetivo de pedir um hamburguer e verificar o status do pedido.
+![preview](./.github/preview.png)
 
-**[🔗 Clique aqui para acessar](https://make-your-burguer-bamarcheti.vercel.app/)**
+Monte seu hambúrguer personalizado escolhendo pão, carne e opcionais, envie o pedido e acompanhe seu status em tempo real.
+
+**[🔗 Clique aqui para acessar](https://make-your-burguer-bamarchetis-projects.vercel.app/)**
 
 ## **🛠 Tecnologias**
 > ![Vue.js](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 > ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+> ![JSON Server](https://img.shields.io/badge/JSON%20Server-000000?style=for-the-badge&logo=json&logoColor=white)
+
+## 🚀 Funcionalidades
+- Seleção de pão, carne e opcionais.
+- Criação de pedidos.
+- Listagem e gerenciamento de pedidos.
+- Atualização de status.
+- Layout responsivo para desktop, tablet e mobile.
 
 ## **✨ Como executar**
 
