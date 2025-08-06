@@ -184,6 +184,20 @@
       ],
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "nome": "Bárbara",
+      "carne": "Contrafilé",
+      "pao": "Pão Australiano",
+      "opcionais": [
+        "Bacon",
+        "Molho de Cheddar",
+        "Cebola Caramelizada",
+        "Tomate",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
