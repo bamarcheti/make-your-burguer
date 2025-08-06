@@ -7,14 +7,20 @@
 </template>
 
 <script>
-import Banner from "../components/Banner.vue";
 import BurguerForm from "@/components/BurguerForm.vue";
+import Banner from "../components/Banner.vue";
 
 export default {
   name: "Home",
   components: {
     Banner,
-    BurguerForm
-  }
-}
+    BurguerForm,
+  },
+};
 </script>
+
+<style>
+.main-container {
+  margin-top: 20px;
+}
+</style>
