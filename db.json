@@ -40,50 +40,5 @@
     { "id": 2, "tipo": "Em produção" },
     { "id": 3, "tipo": "Finalizado" }
   ],
-  "burguers": [
-    {
-      "nome": "Laura",
-      "carne": "Acém",
-      "pao": "Brioche",
-      "opcionais": [
-        "Bacon",
-        "Molho de Cheddar",
-        "Barbecue",
-        "Alface",
-        "Cebola Caramelizada",
-        "Maionese Caseira",
-        "Tomate"
-      ],
-      "status": "Em produção",
-      "id": 2
-    },
-    {
-      "nome": "Beatriz",
-      "carne": "Contrafilé",
-      "pao": "Pão de Hambúrguer Americano",
-      "opcionais": [
-        "Bacon",
-        "Molho de Cheddar",
-        "Barbecue",
-        "Cebola Caramelizada",
-        "Maionese Caseira"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "Bárbara",
-      "carne": "Contrafilé",
-      "pao": "Pão Australiano",
-      "opcionais": [
-        "Bacon",
-        "Molho de Cheddar",
-        "Cebola Caramelizada",
-        "Tomate",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    }
-  ]
+  "burguers": []
 }
