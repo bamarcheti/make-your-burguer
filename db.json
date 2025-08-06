@@ -1,143 +1,44 @@
 {
   "paes": [
-    {
-      "id": 1,
-      "tipo": "Pão de Hambúrguer Americano"
-    },
-    {
-      "id": 2,
-      "tipo": "Pão Italiano"
-    },
-    {
-      "id": 3,
-      "tipo": "Brioche"
-    },
-    {
-      "id": 4,
-      "tipo": "Pão Australiano"
-    },
-    {
-      "id": 5,
-      "tipo": "Pão de Azeite"
-    },
-    {
-      "id": 6,
-      "tipo": "Italiano Branco"
-    },
-    {
-      "id": 7,
-      "tipo": "3 Queijos"
-    },
-    {
-      "id": 8,
-      "tipo": "Parmesão e Orégano"
-    },
-    {
-      "id": 9,
-      "tipo": "Integral"
-    },
-    {
-      "id": 10,
-      "tipo": "Ciabatta"
-    }
+    { "id": 1, "tipo": "Pão de Hambúrguer Americano" },
+    { "id": 2, "tipo": "Pão Italiano" },
+    { "id": 3, "tipo": "Brioche" },
+    { "id": 4, "tipo": "Pão Australiano" },
+    { "id": 5, "tipo": "Pão de Azeite" },
+    { "id": 6, "tipo": "Italiano Branco" },
+    { "id": 7, "tipo": "3 Queijos" },
+    { "id": 8, "tipo": "Parmesão e Orégano" },
+    { "id": 9, "tipo": "Integral" },
+    { "id": 10, "tipo": "Ciabatta" }
   ],
   "carnes": [
-    {
-      "id": 1,
-      "tipo": "Acém"
-    },
-    {
-      "id": 2,
-      "tipo": "Alcatra"
-    },
-    {
-      "id": 3,
-      "tipo": "Contrafilé"
-    },
-    {
-      "id": 4,
-      "tipo": "Coxão duro"
-    },
-    {
-      "id": 5,
-      "tipo": "Fraldinha"
-    },
-    {
-      "id": 6,
-      "tipo": "Maminha"
-    },
-    {
-      "id": 7,
-      "tipo": "Patinho"
-    },
-    {
-      "id": 8,
-      "tipo": "Peito"
-    },
-    {
-      "id": 9,
-      "tipo": "Pescoço"
-    },
-    {
-      "id": 10,
-      "tipo": "Veggie burguer"
-    }
+    { "id": 1, "tipo": "Acém" },
+    { "id": 2, "tipo": "Alcatra" },
+    { "id": 3, "tipo": "Contrafilé" },
+    { "id": 4, "tipo": "Coxão duro" },
+    { "id": 5, "tipo": "Fraldinha" },
+    { "id": 6, "tipo": "Maminha" },
+    { "id": 7, "tipo": "Patinho" },
+    { "id": 8, "tipo": "Peito" },
+    { "id": 9, "tipo": "Pescoço" },
+    { "id": 10, "tipo": "Veggie burguer" }
   ],
   "opcionais": [
-    {
-      "id": 1,
-      "tipo": "Bacon"
-    },
-    {
-      "id": 2,
-      "tipo": "Cheddar"
-    },
-    {
-      "id": 3,
-      "tipo": "Molho de Cheddar"
-    },
-    {
-      "id": 4,
-      "tipo": "Maionese Caseira"
-    },
-    {
-      "id": 5,
-      "tipo": "Barbecue"
-    },
-    {
-      "id": 6,
-      "tipo": "Tomate"
-    },
-    {
-      "id": 7,
-      "tipo": "Alface"
-    },
-    {
-      "id": 8,
-      "tipo": "Picles"
-    },
-    {
-      "id": 9,
-      "tipo": "Cebola Caramelizada"
-    },
-    {
-      "id": 10,
-      "tipo": "Cebola Roxa"
-    }
+    { "id": 1, "tipo": "Bacon" },
+    { "id": 2, "tipo": "Cheddar" },
+    { "id": 3, "tipo": "Molho de Cheddar" },
+    { "id": 4, "tipo": "Maionese Caseira" },
+    { "id": 5, "tipo": "Barbecue" },
+    { "id": 6, "tipo": "Tomate" },
+    { "id": 7, "tipo": "Alface" },
+    { "id": 8, "tipo": "Picles" },
+    { "id": 9, "tipo": "Cebola Caramelizada" },
+    { "id": 10, "tipo": "Cebola Roxa" }
   ],
   "status": [
-    {
-      "id": 1,
-      "tipo": "Solicitado"
-    },
-    {
-      "id": 2,
-      "tipo": "Em produção"
-    },
-    {
-      "id": 3,
-      "tipo": "Finalizado"
-    }
+    { "id": 1, "tipo": "Solicitado" },
+    { "id": 2, "tipo": "Em produção" },
+    { "id": 3, "tipo": "Finalizado" }
   ],
   "burguers": [
     {
