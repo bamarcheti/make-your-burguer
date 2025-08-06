@@ -1,7 +1,11 @@
 <template>
-  <Navbar :logo="logo_src" :alt="app_name" />
-  <router-view />
-  <Footer />
+  <div id="app">
+    <Navbar :logo="logo_src" :alt="app_name" />
+    <main class="main-content">
+      <router-view />
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script>
@@ -29,10 +33,17 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
-.main-container {
-  margin: 50px;
-  min-height: 250px;
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.main-content {
+  flex: 1;
+}
+
 h1 {
   text-align: center;
   font-size: 42px;
