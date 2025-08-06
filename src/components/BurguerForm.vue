@@ -98,6 +98,7 @@ export default {
       this.carnes = carnesRes.data;
       this.opcionaisdata = opcionaisRes.data;
     },
+
     async createBurguer(e) {
       e.preventDefault();
       this.submitted = true;
@@ -124,6 +125,8 @@ export default {
       this.carne = "";
       this.pao = "";
       this.opcionais = [];
+
+      this.submitted = false;
     },
   },
   computed: {
