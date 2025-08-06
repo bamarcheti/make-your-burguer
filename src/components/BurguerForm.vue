@@ -151,7 +151,7 @@ export default {
 
 <style scoped>
 #burguer-form {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -177,7 +177,7 @@ input,
 select {
   padding: 5px 10px;
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
 #opcionais-container {
@@ -211,6 +211,7 @@ select {
   color: #fcba03;
   font-weight: bold;
   border: 2px solid #222;
+  max-width: 400px;
   padding: 10px;
   font-size: 16px;
   margin: 0 auto;

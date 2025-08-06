@@ -18,11 +18,16 @@ export default {
 <style scoped>
 #nav {
   background-color: #222;
-  border-bottom: 4px solid #111;
   padding: 15px 50px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 #nav #logo-url {
