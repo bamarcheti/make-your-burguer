@@ -1,34 +1,50 @@
 <template>
   <div id="burguer-table">
     <Message :msg="msg" v-show="msg" />
-    <div>
-      <div id="burguer-table-heading">
-        <div class="order-id">#:</div>
-        <div>Clientes:</div>
-        <div>Pão:</div>
-        <div>Carne:</div>
-        <div>Opcionais:</div>
-        <div>Ações:</div>
-      </div>
+
+    <!-- Cabeçalho (somente desktop) -->
+    <div id="burguer-table-heading" class="desktop-only">
+      <div class="order-id">N°</div>
+      <div>Clientes</div>
+      <div>Pão</div>
+      <div>Carne</div>
+      <div>Opcionais</div>
+      <div>Ações</div>
     </div>
+
+    <!-- Linhas -->
     <div id="burguer-table-rows">
       <div
         class="burguer-table-row"
         v-for="burguer in burguers"
         :key="burguer.id"
       >
-        <div class="order-number">{{ burguer.id }}</div>
-        <div>{{ burguer.nome }}</div>
-        <div>{{ burguer.pao }}</div>
-        <div>{{ burguer.carne }}</div>
-        <div>
+        <!-- Layout desktop -->
+        <div class="desktop-only order-number">{{ burguer.id }}</div>
+        <div class="desktop-only">{{ burguer.nome }}</div>
+        <div class="desktop-only">{{ burguer.pao }}</div>
+        <div class="desktop-only">{{ burguer.carne }}</div>
+        <div class="desktop-only">
           <ul>
             <li v-for="(opcional, index) in burguer.opcionais" :key="index">
               {{ opcional }}
             </li>
           </ul>
         </div>
-        <div>
+
+        <!-- Layout mobile -->
+        <div class="mobile-card">
+          <p><strong>N°:</strong> {{ burguer.id }}</p>
+          <p><strong>Cliente:</strong> {{ burguer.nome }}</p>
+          <p><strong>Pão:</strong> {{ burguer.pao }}</p>
+          <p><strong>Carne:</strong> {{ burguer.carne }}</p>
+          <p v-if="burguer.opcionais.length">
+            <strong>Opcionais:</strong> {{ burguer.opcionais.join(", ") }}
+          </p>
+        </div>
+
+        <!-- Ações -->
+        <div class="actions">
           <select
             name="status"
             class="status"
@@ -96,79 +112,13 @@ export default {
     this.getPedidos();
   },
 };
-
-// import Message from './Message.vue';
-
-// export default {
-//     name: "Dashboard",
-//     data() {
-//         return {
-//             burguers: null,
-//             burguer_id: null,
-//             status: [],
-//             msg: null
-//         }
-//     },
-//     components: {
-//         Message
-//     },
-//     methods: {
-//         async getPedidos() {
-//             const req = await fetch("http://localhost:3000/burguers");
-//             const data = await req.json();
-//             this.burguers = data;
-//             console.log(this.burguers);
-//             // resgatar os status
-//             this.getStatus();
-//         },
-//         async getStatus() {
-//             const req = await fetch("http://localhost:3000/status");
-//             const data = await req.json();
-//             this.status = data;
-//         },
-//         async deleteBurguer(id) {
-//             const req = await fetch(`http://localhost:3000/burguers/${id}`, {
-//                 method: "DELETE"
-//             });
-//             const res = await req.json();
-
-//             // colocar uma mensagem no sistema
-//             this.msg = `Pedido removido com sucesso!`;
-
-//             // limpar mensagem
-//             setTimeout(() => this.msg = "", 3000);
-
-//             this.getPedidos();
-//         },
-//         async updateBurguer(event, id) {
-//             const option = event.target.value;
-//             const dataJson = JSON.stringify({ status: option });
-//             const req = await fetch(`http://localhost:3000/burguers/${id}`, {
-//                 method: "PATCH",
-//                 headers: { "Content-Type": "application/json" },
-//                 body: dataJson
-//             });
-//             const res = await req.json();
-
-//             // colocar uma mensagem no sistema
-//             this.msg = `O pedido N° ${res.id} foi atualizado para ${res.status}`;
-
-//             // limpar mensagem
-//             setTimeout(() => this.msg = "", 3000);
-
-//             console.log(res);
-//         },
-//     },
-//     mounted() {
-//         this.getPedidos();
-//     },
-// }
 </script>
 
 <style scoped>
 #burguer-table {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 #burguer-table-heading,
@@ -193,6 +143,7 @@ export default {
   width: 100%;
   padding: 12px;
   border-bottom: 1px solid #ccc;
+  align-items: center;
 }
 
 #burguer-table-heading .order-id,
@@ -201,8 +152,8 @@ export default {
 }
 
 select {
-  padding: 12px 6px;
-  margin-right: 12px;
+  padding: 8px 6px;
+  min-width: 120px;
 }
 
 .delete-btn {
@@ -210,9 +161,9 @@ select {
   color: #fcba03;
   font-weight: bold;
   border: 2px solid #222;
-  padding: 10px;
-  font-size: 16px;
-  margin: 0 auto;
+  padding: 8px 12px;
+  min-width: 120px;
+  font-size: 14px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -220,5 +171,95 @@ select {
 .delete-btn:hover {
   background-color: transparent;
   color: #222;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Mobile cards */
+.mobile-card {
+  display: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.mobile-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* .mobile-card {
+    display: block;
+  } */
+
+  /* .burguer-table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+  } */
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  select,
+  .delete-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  ::v-deep(.desktop-only) {
+    display: none !important;
+  }
+
+  .mobile-card {
+    display: block;
+  }
+
+  .mobile-card p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .burguer-table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+  }
+
+  #burguer-table-heading div,
+  .burguer-table-row div {
+    width: 100%;
+  }
+
+  .delete-btn {
+    margin-top: 0px;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 </style>
